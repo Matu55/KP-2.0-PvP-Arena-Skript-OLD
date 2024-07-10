@@ -1,0 +1,148 @@
+options:
+    nazwa: &f&k&l|||&6&lPvP&f&k&l|||&6&lZone&f&k&l|||
+
+command /pvp:join <player>:
+    permission: kp.pvp.arena
+    trigger:
+        execute console command "/mvtp %arg-1% pvp"
+        wait 1 second
+        execute console command "/tp %arg-1% 11 -58 -19"
+        send title "&4&lPvP Arena" with subtitle "&6Witaj na spawnie trybu PvP" to player
+
+command /pvp:map:wildwest <player>:
+    permission: kp.pvp.arena
+    trigger:
+        execute console command "/tp %arg-1% 12 -54 -103"
+        execute console command "/clear %arg-1%"
+        add iron sword named "{@nazwa}" to arg 1 
+        add iron helmet named "{@nazwa}" to arg 1 
+        add iron chestplate named "{@nazwa}" to arg 1  
+        add iron leggings named "{@nazwa}" to arg 1 
+        add iron boots named "{@nazwa}" to arg 1 
+        give arg-1 64 cooked porkchop named "{@nazwa}"
+        add Enchanted Golden Apple named "{@nazwa}" to arg 1
+        add bow named "{@nazwa}" to arg 1 
+        give arg-1  64 arrow named "{@nazwa}"
+        add 16 Ender Pearl named "{@nazwa}" to arg 1
+        send "&4&lPo zakończonej walcę proszę wpisać /pvp:stop" to arg 1
+        send title "&6&lWild West" with subtitle "&6przygotuj się do PvP" to arg 1
+        wait 1 second
+        send title "&4&l10" to arg 1
+        wait 1 second
+        send title "&4&l9" to arg 1
+        wait 1 second
+        send title "&4&l8" to arg 1
+        wait 1 second
+        send title "&4&l7" to arg 1
+        wait 1 second
+        send title "&4&l6" to arg 1
+        wait 1 second
+        send title "&4&l5" to arg 1
+        wait 1 second
+        send title "&4&l4" to arg 1
+        wait 1 second
+        send title "&4&l3" to arg 1
+        wait 1 second
+        send title "&4&l2" to arg 1
+        wait 1 second
+        send title "&4&l1" to arg 1
+        wait 1 second
+        send title "&4&l0" to arg 1
+        send title "&a&lStart" with subtitle "&6Do Boju!" to arg 1   
+
+command /pvp:map:arena <player>:
+    permission: kp.pvp.arena
+    trigger:
+        execute console command "/tp %arg-1% 103 -53 -110"
+        execute console command "/clear %arg-1%"
+        add iron sword named "{@nazwa}" to arg 1 
+        add iron helmet named "{@nazwa}" to arg 1 
+        add iron chestplate named "{@nazwa}" to arg 1  
+        add iron leggings named "{@nazwa}" to arg 1 
+        add iron boots named "{@nazwa}" to arg 1 
+        give arg-1 64 cooked porkchop named "{@nazwa}"
+        add Enchanted Golden Apple named "{@nazwa}" to arg 1
+        add bow named "{@nazwa}" to arg 1 
+        give arg-1  64 arrow named "{@nazwa}"
+        add 16 Ender Pearl named "{@nazwa}" to arg 1
+        send "&4&lPo zakończonej walcę proszę wpisać /pvp:stop" to arg 1 
+        send title "&3&lArena" with subtitle "&6przygotuj się do PvP" to arg 1
+        wait 1 second
+        send title "&4&l10" to arg 1
+        wait 1 second
+        send title "&4&l9" to arg 1
+        wait 1 second
+        send title "&4&l8" to arg 1
+        wait 1 second
+        send title "&4&l7" to arg 1
+        wait 1 second
+        send title "&4&l6" to arg 1
+        wait 1 second
+        send title "&4&l5" to arg 1
+        wait 1 second
+        send title "&4&l4" to arg 1
+        wait 1 second
+        send title "&4&l3" to arg 1
+        wait 1 second
+        send title "&4&l2" to arg 1
+        wait 1 second
+        send title "&4&l1" to arg 1
+        wait 1 second
+        send title "&4&l0" to arg 1
+        send title "&a&lStart" with subtitle "&6Do Boju!" to arg 1
+
+command /pvp:map:castle <player>:
+    permission: kp.pvp.arena
+    trigger:
+        execute console command "/tp %arg-1% -113 -49 -71"
+        execute console command "/clear %arg-1%"
+        add iron sword named "{@nazwa}" to arg 1 
+        add iron helmet named "{@nazwa}" to arg 1 
+        add iron chestplate named "{@nazwa}" to arg 1  
+        add iron leggings named "{@nazwa}" to arg 1 
+        add iron boots named "{@nazwa}" to arg 1 
+        give arg-1 64 cooked porkchop named "{@nazwa}"
+        add Enchanted Golden Apple named "{@nazwa}" to arg 1
+        add bow named "{@nazwa}" to arg 1
+        give arg-1  64 arrow named "{@nazwa}"
+        add 16 Ender Pearl named "{@nazwa}" to arg 1
+        send "&4&lPo zakończonej walcę proszę wpisać /pvp:stop" to arg 1
+        send title "&4&lCastle" with subtitle "&6przygotuj się do PvP" to arg 1
+        wait 1 second
+        send title "&4&l10" to arg 1
+        wait 1 second
+        send title "&4&l9" to arg 1
+        wait 1 second
+        send title "&4&l8" to arg 1
+        wait 1 second
+        send title "&4&l7" to arg 1
+        wait 1 second
+        send title "&4&l6" to arg 1
+        wait 1 second
+        send title "&4&l5" to arg 1
+        wait 1 second
+        send title "&4&l4" to arg 1
+        wait 1 second
+        send title "&4&l3" to arg 1
+        wait 1 second
+        send title "&4&l2" to arg 1
+        wait 1 second
+        send title "&4&l1" to arg 1
+        wait 1 second
+        send title "&4&l0" to arg 1
+        send title "&a&lStart" with subtitle "&6Do Boju!" to arg 1
+
+command /pvp:stop:
+	permission: kp.pvp.stop
+	trigger:
+		execute console command "/tp %player% 11 -58 -19"
+		remove all iron sword named "{@nazwa}" from player's inventory
+		remove all iron helmet named "{@nazwa}" from player's inventory
+		remove all iron chestplate named "{@nazwa}" from player's inventory
+		remove all iron leggings named "{@nazwa}" from player's inventory
+		remove all iron boots named "{@nazwa}" from player's inventory
+		remove all Enchanted Golden Apple named "{@nazwa}" from player's inventory
+		remove all cooked porkchop named "{@nazwa}" from player's inventory
+		remove all bow named "{@nazwa}" from player's inventory
+		remove all arrow named "{@nazwa}" from player's inventory
+		remove all Ender Pearl named "{@nazwa}" from player's inventory
